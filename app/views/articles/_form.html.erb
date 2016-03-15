@@ -1,0 +1,14 @@
+<%= form_for :article, url: articles_path do |article| %>
+<p>
+  <%= article.label :title %><br>
+  <%= article.text_field :title %>
+</p>
+
+<p> <%= article.label :body %><br>
+    <%= article.text_area :body %>
+</p>
+
+<p> <%= article.submit %>
+</p>
+
+<% end %>
