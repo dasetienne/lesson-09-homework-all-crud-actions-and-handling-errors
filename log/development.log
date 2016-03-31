@@ -3918,3 +3918,137 @@ Processing by ArticlesController#index as
   [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html.erb within layouts/application (59.1ms)
 Completed 200 OK in 215ms (Views: 213.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 16:12:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 336ms (Views: 311.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 16:12:47 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-31 16:12:47 -0400
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-31 16:12:47 -0400
+
+
+Started GET "/articles/24/edit" for ::1 at 2016-03-31 16:12:56 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered articles/_form.html.erb (25.1ms)
+  Rendered articles/edit.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 79ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2016-03-31 16:13:08 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kBeiUsh4v96Td0Pz59ERSk6D+xx0nWh/glc9js2MEeP8ot4H5yk8uAu5z9PJuy4fvNHSSJCyCZWJS1vpp1MlOg==", "article"=>{"title"=>"", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/_form.html.erb (43.5ms)
+  Rendered articles/new.html.erb within layouts/application (46.8ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `full_messages' for #<Article:0x007f9ab1994ed8>):
+    20:    <p><%= pluralize(@article.errors.count, "error") %> prohibited this course from being updated:</p>
+    21: 
+    22:    <p>
+    23:    <% @article.full_messages.each do |message| %>
+    24:      <%= message %>
+    25:    <% end %>  
+    26:    </p>
+  app/views/articles/_form.html.erb:23:in `_app_views_articles__form_html_erb__959453737360715043_70151192240380'
+  app/views/articles/new.html.erb:19:in `_app_views_articles_new_html_erb__1535926286864401938_70151191883960'
+  app/controllers/articles_controller.rb:18:in `create'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.5ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-31 16:19:27 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/24/edit" for ::1 at 2016-03-31 16:19:29 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for ::1 at 2016-03-31 16:19:33 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjWzTmWZOVvRFasH71ooA4N8FlIPGJ2GvZUYT/o8aoYKgM8bSsi6PUnbJyfBMBdWcS4/Bus3/Gy2iX4okONeXw==", "article"=>{"title"=>"", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2016-03-31 16:19:37 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKoW9atoBvTs/WWHhnj1tc9vPhY5zZOi5upQzHnN7sPgH2qghDmFknQz6aeoEsrgPT0XQt3i8kjt9jarExLaGg==", "article"=>{"title"=>"The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!"], ["body", "The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"], ["created_at", "2016-03-31 20:19:37.816510"], ["updated_at", "2016-03-31 20:19:37.816510"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles.29
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/articles.29" for ::1 at 2016-03-31 16:19:37 -0400
+Processing by ArticlesController#index as 
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for ::1 at 2016-03-31 16:21:13 -0400
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (3.3ms)
+  Rendered articles/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2016-03-31 16:21:16 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d5XyMlmJVHSgL2fYVf3BPNrGm6Qwx9UaQiFjLAfE84obII5ndtjXEjjh6/h7l/5pKJSy8NTotPBJPQVLbRvHUw==", "article"=>{"title"=>"", "body"=>"dscsvsv"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.4ms)

@@ -10,13 +10,13 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.create(article_params)
 
-      if @article.save
-        flash[:notice] = "Article has been created."
-        redirect_to articles_path(@article)
-      else
-        flash[:error] = "Article could not be created."
-        render :new
-      end
+    if @article.save
+      flash[:notice] = "Article has been created."
+      redirect_to articles_path(@article)
+    else
+      flash.now[:error] = "Article could not be created."
+      render :new
+    end
   end
 
   def show
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article has been updated."
       redirect_to articles_path(@article)
     else
-      flash[:error] = "Article could not be updated."
+      flash.now[:error] = "Article could not be updated."
       render :edit
     end
   end
