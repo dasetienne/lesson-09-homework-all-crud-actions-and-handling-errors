@@ -1,4 +1,4 @@
-<%= form_for :article, url: articles_path do |article| %>
+<%= form_for @article, html: { multipart: true } do |article| %>
 
   <% if @article.errors.any? %>
     <% @article.errors.full_messages.each do |message| %>

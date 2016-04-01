@@ -4052,3 +4052,443 @@ Processing by ArticlesController#create as HTML
   Rendered articles/_form.html.erb (2.7ms)
   Rendered articles/new.html.erb within layouts/application (4.7ms)
 Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 16:37:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 304ms (Views: 287.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 16:37:53 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 23:36:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.1ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 376ms (Views: 355.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 23:36:47 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/29/edit" for ::1 at 2016-03-31 23:36:52 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 29]]
+  Rendered articles/_form.html.erb (25.8ms)
+  Rendered articles/edit.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 66ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for ::1 at 2016-03-31 23:36:55 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djKnZC8CB0HvhwwFkApVM8RvVfkYKM2zCVaOakEPUfUah9sxAFOEJ3dJgCW+YGpmNj18rfwHrFkCSugNK9BlLA==", "article"=>{"title"=>"The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Save Article"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!"], ["body", "The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"], ["created_at", "2016-04-01 03:36:55.020872"], ["updated_at", "2016-04-01 03:36:55.020872"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles.30
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/articles.30" for ::1 at 2016-03-31 23:36:55 -0400
+Processing by ArticlesController#index as 
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/30" for ::1 at 2016-03-31 23:36:59 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gbVgeHAbqyPwiZxmQ3UnfGAgIR3sMVmAlUGw2OOG5XHtABwtX0ooRWhHEEZtHxgpknIISQgeOGqeXda/iVnRqA==", "id"=>"30"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 30]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-31 23:36:59 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-31 23:39:59 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/24/edit" for ::1 at 2016-03-31 23:40:01 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 24]]
+  Rendered articles/_form.html.erb (3.5ms)
+  Rendered articles/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/24" for ::1 at 2016-03-31 23:40:03 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O2a9Z8AthsEI3lkiIL8j5awbhDMQhmTTOj2uiDrvOf5X08Ey73wFp5AQ1QIO1RywXkmtZ/SpBTkxIcjvUDANJw==", "article"=>{"title"=>"The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Update Article", "id"=>"24"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 24]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `article' for #<ArticlesController:0x007f8c4b740840>):
+  app/controllers/articles_controller.rb:33:in `update'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (141.3ms)
+
+
+Started GET "/articles/16/edit" for ::1 at 2016-03-31 23:44:09 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 16]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=16):
+  app/controllers/articles_controller.rb:27:in `edit'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.5ms)
+
+
+Started GET "/articles/16/edit" for ::1 at 2016-03-31 23:44:10 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 16]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=16):
+  app/controllers/articles_controller.rb:27:in `edit'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.0ms)
+
+
+Started GET "/articles/" for ::1 at 2016-03-31 23:44:17 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/28/edit" for ::1 at 2016-03-31 23:44:19 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 28]]
+  Rendered articles/_form.html.erb (3.2ms)
+  Rendered articles/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/28/edit" for ::1 at 2016-03-31 23:50:14 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 28]]
+  Rendered articles/_form.html.erb (3.6ms)
+  Rendered articles/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/articles/28" for ::1 at 2016-03-31 23:50:16 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YlymweDI21VEXp+YcQ4R1IGE6h67vHYsoCZG8iFHtU0O6dqUz5lYM9yQE7hfZC6Bc9bDSl+TF8arOiCVS5iBlA==", "article"=>{"title"=>"How To Build Your First March Madness Bracket", "body"=>"Somehow, as a lifelong basketball fan, I woke up today having never in my life built a March Madness bracket. How is this possible? How have I conned my way into employment at a sports website, and how long until the jig is up? I’ve put money an early-season Minnesota Timberwolves game (and won), but never wagered on this premier sports gambling event, which lasts weeks, gets Warren Buffett dangling riches in front of his employees, and attracts millions of hopeful entries from office drones who’ve never watched a minute of college ball in their lives. Today, I hope to correct this error with minimal effort or knowledge about this NCAA season; instead, I will rely on a lot of “intuition.” Here is a guide to fitting in with your peers, or brazenly refusing to fit in with your peers at all.\r\n\r\nFirst Pass: Act With Your Brain\r\n\r\nI’ve got to advance the 1 seeds, because I value $25 just enough not to, and predicting heavy upsets seems to be dumb as hell, points-wise. I’ll follow suit with the 2's and 3's.\r\n\r\nMy eyes are drawn to the 5-12 matchups, which’ve historically been ripe for upsets, though that may have more to do with the psychology of an “upset” and the fallibility of seeding. So pick one of those if you want, but be advised that plenty of others will, too.\r\n\r\nAlso, as my colleague Samer advises, don’t believe in Gonzaga, ever.\r\n\r\nOur pals at Lifehacker just dished up a list of statistical factors that may inform your picks: recent hot streaks, road records, strength of schedule, traveling logistics. Stir in as many of these as you like, but not too many, because ...\r\n\r\nSecond Pass: Act With Your Heart\r\n\r\nA bracket too rationally constructed is a sterile thing; it yields no joy, no messiness. I am not one to eat buffalo wings with a fork and knife.\r\n\r\nAlso, if you need to follow my advice, your friends are surely wiser than you and are in fact probably hustling you, so you might as well have some fun, inject some chaos into your pool, and arrange your bracket for maximum emotional upside.\r\n\r\nSo examine your gut: Do you have any vague, churning feelings towards any of these teams or cities? Feel free to act on that basis. I’ll pick Yale in the first round, because they shattered my adolescent hopes, and I always come limping back to those who hurt me most. For a denizen of the Least Coast, California vs. Hawaii sounds like a first-round matchup of fantasy escapes—go with whichever calls out to you most, avocados or pineapples. Iona reads like a bootleg of its higher-seeded competitor, Iowa, and I distrust all hastily spelled imposters.\r\n\r\nMaybe you, hypothetically, during a road trip to nowhere in early January, spent a haunting evening in an empty Morgantown, where you shambled through the gravel parking lot of a fraternity and questioned the trajectory of your life. If that’s the case (hypothetically), dump WVU in the second round. Enjoying the cheese on your lunch? Wisconsin. Lactose-intolerant? Fuck Wisconsin. Intolerant, generally? Take any state that’s cast its lot with Trump. Allergic to acronyms? Eliminate any school that appears on your bracket as a mere pile of letters.\r\n\r\nMaybe you are my unnamed, elitist acquaintance? Then you’ll just always pick the “dumber school,” unless it’s Duke. And you’ll forever live in fear that one day I will doxx you and your nasty habits on this website.\r\n\r\nWhatever you do, identify a few arbitrary principles that you can cite after the fact as the reason for your improbable success, and don’t hew to any of them too closely if it stresses you out.\r\n\r\nThird Pass: Let It Go\r\n\r\nRelax. You have survived under these pressing social norms. You don’t even have to watch the games unless you have social reason to do so (or you’re trying to avoid doing actual work). Be sure to gloat, though, if you do successfully pick an upset. You just had a feeling Iona would come through."}, "commit"=>"Update Article", "id"=>"28"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 28]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `article' for #<ArticlesController:0x007f8c518187d0>):
+  app/controllers/articles_controller.rb:33:in `update'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (124.6ms)
+
+
+Started PATCH "/articles/16" for ::1 at 2016-03-31 23:51:56 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8wvAnmxgmxddNGXWs6Rvo5y1YF1VKbX0V0PZ/eQpwEFggKURB4y73bLv5EgUa14tWoFTzCTITxO5ylReGhdzlQ==", "article"=>{"title"=>"Horny Alabama Governor Robert Bentley Bought His Own Burner Phones At Best Buy", "body"=>"There are plenty of ways to arouse suspicion as a sitting governor. Here’s a pretty good one from Alabama’s Robert Bentley, who is currently beating back a festering adultery scandal: personally purchasing cheap burner phones at Best Buy.\r\n\r\nAccording to AL.com, multiple employees of a Best Buy in Tuscaloosa confirm that they personally sold—or witnessed another employee selling—AT&T burner flip phones to the governor on several occasions. Said one source:\r\n\r\n[U]p until the scandal came to light, Bentley HIMSELF would by (sic) little burner phones ... I witnessed it with my own 2 eyes and even sold him one,” the current Best Buy employee wrote via online message. “I sold to him once, saw him purchase twice.”\r\nAL.com further reports that when they filed a public records request to see text message conversations on Bentley’s state phone they were given back a whole bunch of nothing:\r\n\r\nBut Bentley’s office only provided one short string of less than a dozen text messages between him and Mason in response to an AL.com public records request last year seeking text exchanges from his state cell phone, saying that he did not text often on that phone.\r\nBut in the leaked phone conversations, Bentley makes several references to sending and receiving texts. He also at one point talks to his alleged mistress and recently deposed advisor Rebekah Caldwell Mason on FaceTime, which suggests he used multiple phones, a suspicion confirmed by the ex-police officer who spoke about Bentley’s rumored affair on the record last week. Per AL.com:\r\n\r\nThe revelation that Bentley purchased disposable “burner” phones comes as he attempts to politically recover from allegations by former Alabama Law Enforcement Agency head Spencer Collier that Bentley had a sexual relationship with former top political adviser Rebekah Caldwell Mason.\r\n\r\nCollier told AL.com last week that while he worked for Bentley, the governor was a text message user and frequently changed cell phones.\r\n“Don’t buy your own burners” should probably be one of the first things they teach you in Governor’s School.\r\n\r\n", "author_id"=>"1", "tag_ids"=>["1", "3", ""]}, "commit"=>"Update Article", "id"=>"16"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.1) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/RocioEtienne/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/RocioEtienne/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/RocioEtienne/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.7ms)
+
+
+Started GET "/articles/" for ::1 at 2016-03-31 23:52:13 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/24/edit" for ::1 at 2016-03-31 23:52:15 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 24]]
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/24" for ::1 at 2016-03-31 23:52:17 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zDF4uS5bvDHU5Ybg2WTgBhbgQvNLdwUkQTzVMuj9qCueqYEH5fGgKZWRBu1m9qSCzTQHVkxBIfKnHzepfIbR5Q==", "article"=>{"title"=>"The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Update Article", "id"=>"24"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 24]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `article' for #<ArticlesController:0x007f8c50bf5458>):
+  app/controllers/articles_controller.rb:33:in `update'
+
+
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.8ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/RocioEtienne/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.8ms)
+
+
+Started GET "/" for ::1 at 2016-03-31 23:52:46 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-04-01 00:08:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (1.8ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 296ms (Views: 276.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/articles/29/edit" for ::1 at 2016-04-01 00:09:04 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 29]]
+  Rendered articles/_form.html.erb (27.0ms)
+  Rendered articles/edit.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 61ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/29" for ::1 at 2016-04-01 00:09:06 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gozy2eem21kH9JZTf0vJXOp3nL/ho/nRmWh1WvLk+rPuOY6MyPdYP586GnNRIfYJGCW16wWMmDuSdBM9mDvOag==", "article"=>{"title"=>"The Metro Is Apparently So Dangerous No One Can Take It At All Tomorrow So Have a Good Evening Commute!", "body"=>"The Washington D.C. Metropolitan Area Transit Authority (WMATA) announced today it will shut down the District’s metro system tomorrow due to an “emergency investigation.” But everything will be just fine for commuters tonight, probably.\r\n\r\nThe problem—which is somehow both safe enough for commuters to travel on the Metro this evening, yet dangerous enough that the city is shutting its entire down for an entire day with just a few hours notice—is reportedly related to jumper cables.\r\n\r\nWMATA’s general manager and CEO Paul J. Wiedefeld says he can’t promise the problem isn’t life-threatening—but on the bright side, he also can’t promise it is.\r\n\r\n“While the risk to the public is very low, I cannot rule out a potential life safety issue here, and that is why we must take this action immediately,” Wiedefeld said.\r\n\r\nNo need to panic, I’m sure!!!!"}, "commit"=>"Update Article", "id"=>"29"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 29]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles.29
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles.29" for ::1 at 2016-04-01 00:09:06 -0400
+Processing by ArticlesController#index as 
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/29" for ::1 at 2016-04-01 00:09:22 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ThO8PXgLIK1Bh9AxilJwYla7McyG1dGg3K6x0B+imlYipsBoV1qjy9lJXBGkOE83pOkYmGL6sErXste3dX2ujw==", "id"=>"29"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 29]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 29]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/articles" for ::1 at 2016-04-01 00:09:22 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/28/edit" for ::1 at 2016-04-01 00:09:28 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 28]]
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/28" for ::1 at 2016-04-01 00:09:29 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8/EH741AkyaK0JZ/siDleVT22gCaXsTuknpMmT7qy+ifRHu6ohEQQBIeGl+cStospqTzVH5xpQSZZir+VDX/MQ==", "article"=>{"title"=>"How To Build Your First March Madness Bracket", "body"=>"Somehow, as a lifelong basketball fan, I woke up today having never in my life built a March Madness bracket. How is this possible? How have I conned my way into employment at a sports website, and how long until the jig is up? I’ve put money an early-season Minnesota Timberwolves game (and won), but never wagered on this premier sports gambling event, which lasts weeks, gets Warren Buffett dangling riches in front of his employees, and attracts millions of hopeful entries from office drones who’ve never watched a minute of college ball in their lives. Today, I hope to correct this error with minimal effort or knowledge about this NCAA season; instead, I will rely on a lot of “intuition.” Here is a guide to fitting in with your peers, or brazenly refusing to fit in with your peers at all.\r\n\r\nFirst Pass: Act With Your Brain\r\n\r\nI’ve got to advance the 1 seeds, because I value $25 just enough not to, and predicting heavy upsets seems to be dumb as hell, points-wise. I’ll follow suit with the 2's and 3's.\r\n\r\nMy eyes are drawn to the 5-12 matchups, which’ve historically been ripe for upsets, though that may have more to do with the psychology of an “upset” and the fallibility of seeding. So pick one of those if you want, but be advised that plenty of others will, too.\r\n\r\nAlso, as my colleague Samer advises, don’t believe in Gonzaga, ever.\r\n\r\nOur pals at Lifehacker just dished up a list of statistical factors that may inform your picks: recent hot streaks, road records, strength of schedule, traveling logistics. Stir in as many of these as you like, but not too many, because ...\r\n\r\nSecond Pass: Act With Your Heart\r\n\r\nA bracket too rationally constructed is a sterile thing; it yields no joy, no messiness. I am not one to eat buffalo wings with a fork and knife.\r\n\r\nAlso, if you need to follow my advice, your friends are surely wiser than you and are in fact probably hustling you, so you might as well have some fun, inject some chaos into your pool, and arrange your bracket for maximum emotional upside.\r\n\r\nSo examine your gut: Do you have any vague, churning feelings towards any of these teams or cities? Feel free to act on that basis. I’ll pick Yale in the first round, because they shattered my adolescent hopes, and I always come limping back to those who hurt me most. For a denizen of the Least Coast, California vs. Hawaii sounds like a first-round matchup of fantasy escapes—go with whichever calls out to you most, avocados or pineapples. Iona reads like a bootleg of its higher-seeded competitor, Iowa, and I distrust all hastily spelled imposters.\r\n\r\nMaybe you, hypothetically, during a road trip to nowhere in early January, spent a haunting evening in an empty Morgantown, where you shambled through the gravel parking lot of a fraternity and questioned the trajectory of your life. If that’s the case (hypothetically), dump WVU in the second round. Enjoying the cheese on your lunch? Wisconsin. Lactose-intolerant? Fuck Wisconsin. Intolerant, generally? Take any state that’s cast its lot with Trump. Allergic to acronyms? Eliminate any school that appears on your bracket as a mere pile of letters.\r\n\r\nMaybe you are my unnamed, elitist acquaintance? Then you’ll just always pick the “dumber school,” unless it’s Duke. And you’ll forever live in fear that one day I will doxx you and your nasty habits on this website.\r\n\r\nWhatever you do, identify a few arbitrary principles that you can cite after the fact as the reason for your improbable success, and don’t hew to any of them too closely if it stresses you out.\r\n\r\nThird Pass: Let It Go\r\n\r\nRelax. You have survived under these pressing social norms. You don’t even have to watch the games unless you have social reason to do so (or you’re trying to avoid doing actual work). Be sure to gloat, though, if you do successfully pick an upset. You just had a feeling Iona would come through."}, "commit"=>"Update Article", "id"=>"28"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles.28
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/articles.28" for ::1 at 2016-04-01 00:09:29 -0400
+Processing by ArticlesController#index as 
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
